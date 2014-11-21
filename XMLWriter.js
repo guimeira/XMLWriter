@@ -138,6 +138,8 @@ XMLWriter.prototype = {
 };
 
 function html(s) {
+	//Make sure s is a string and not a number or whatever:
+	s = s.toString();
 	return s.split('&').join('&amp;').split( '<').join('&lt;').split('>').join('&gt;').split('"').join('&quot;')
 }
 
